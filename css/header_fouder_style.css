@@ -23,85 +23,26 @@ a {
 
 header {
     width: 100vw;
-    height: 40px;
     position: relative;
-    background-color: #60CAE8;
-    align-items: center;
+    background-color: #FFF;
     display: flex;
+    align-items: center;
     z-index: 1;
 
 }
-
-/* burger */
-
-.burger {
-    display: block;
-    width: 42px;
-    height: 24px;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
+header .logo_site{
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.burger span {
-    width: 100%;
-    height: 4px;
-    background-color: #020405;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s ease-in-out;
-}
-.burger span::before, .burger span::after {
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: #020405;
-    position: absolute;
-    transition: transform 0.3s ease-in-out;
+.logo_site img{
+    height: 70px;
 }
 
-.burger span::before {
-    transform: translateY(-10px);
-}
-.burger span::after {
-    transform: translateY(10px);
-}
-.burger.open span {
-    background-color: transparent;
-}
-.burger.open span::before {
-    transform: rotateZ(45deg);
-}
-.burger.open span::after {
-    transform: rotateZ(-45deg);
-}
 
-/* navigation */
-.nav_header {
-    width: 50vw;
-    height: 100%;
-    position: fixed;
-    padding: 20px;
-    right: -50%;
-    top: 40px;
-    background-color: #60CAE8;
-    transition: right 0.5s ease-in-out;
-}
-.nav_header.open {
-    right: 0;
-}
-.link_nav_header{
-    margin-bottom: 15px;
-}
-.link_nav_header a {
-    color: #020405;
-    font-weight: bold;
-    height: 100%;
-}
-.link_nav_header a:hover{
-    color: white;
-}
+
+
 
 /* footer */
 footer {
@@ -109,7 +50,7 @@ footer {
     bottom: 0;
     height: 100px;
     width: 100%;
-    background-color: #60CAE8;
+    background-color: #FFF;
 }
 .footer_contenent {
     position: absolute;
@@ -145,4 +86,111 @@ footer img{
     right: 10%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+@media screen and ( max-width: 600px) {
+    /* burger */
+    .burger {
+        display: block;
+        width: 42px;
+        height: 24px;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+    }
+    .burger span {
+        width: 100%;
+        height: 4px;
+        background-color: #020405;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.3s ease-in-out;
+    }
+    .burger span::before, .burger span::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #020405;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .burger span::before {
+        transform: translateY(-10px);
+    }
+    .burger span::after {
+        transform: translateY(10px);
+    }
+    .burger.open span {
+        background-color: transparent;
+    }
+    .burger.open span::before {
+        transform: rotateZ(45deg);
+    }
+    .burger.open span::after {
+        transform: rotateZ(-45deg);
+    }
+
+    /* navigation */
+    .nav_header {
+        width: 50vw;
+        height: 100%;
+        position: fixed;
+        padding: 20px;
+        right: -50%;
+        top: 70px;
+        background-color: #FFF;
+        transition: right 0.5s ease-in-out;
+    }
+    .nav_header.open {
+        right: 0;
+    }
+    .link_nav_header{
+        margin-bottom: 15px;
+    }
+    .link_nav_header a {
+        color: #020405;
+        font-weight: bold;
+        height: 100%;
+    }
+    .link_nav_header a:hover{
+        color: rgb(189, 10, 10);
+    }
+}
+@media screen and ( min-width: 601px) {
+    /* navigation */
+    .nav_header {
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        
+    }
+    .nav_header.open {
+        right: 0;
+    }
+    .link_nav_header{
+    }
+    .link_nav_header a {
+        text-align: center;
+        color: #020405;
+        font-weight: bold;
+        height: 100%;
+    }
+    .link_nav_header a:hover{
+        color: rgb(189, 10, 10);
+    }
+    
+}
+@media screen and ( min-width: 1200px) {
+    .nav_header {
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        
+    }
+    
 }
