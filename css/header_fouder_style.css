@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body{
+    background-size: 100%;
+    background: #020405;
+    font-family:  "Baloo 2",Poppins, Roboto, Oxygen, Ubuntu, sans-serif;
+    color: black;
+}
+li {
+    list-style: none;
+}
+a {
+    color: black;
+}
+
+/* header */
+
+header {
+    width: 100vw;
+    height: 40px;
+    position: relative;
+    background-color: #60CAE8;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+
+}
+
+/* burger */
+
+.burger {
+    display: block;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+.burger span {
+    width: 100%;
+    height: 4px;
+    background-color: #020405;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease-in-out;
+}
+.burger span::before, .burger span::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #020405;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.burger span::before {
+    transform: translateY(-10px);
+}
+.burger span::after {
+    transform: translateY(10px);
+}
+.burger.open span {
+    background-color: transparent;
+}
+.burger.open span::before {
+    transform: rotateZ(45deg);
+}
+.burger.open span::after {
+    transform: rotateZ(-45deg);
+}
+
+/* navigation */
+.nav_header {
+    width: 50vw;
+    height: 100%;
+    position: fixed;
+    padding: 20px;
+    right: -50%;
+    top: 40px;
+    background-color: #60CAE8;
+    transition: right 0.5s ease-in-out;
+}
+.nav_header.open {
+    right: 0;
+}
+.link_nav_header{
+    margin-bottom: 15px;
+}
+.link_nav_header a {
+    color: #020405;
+    font-weight: bold;
+    height: 100%;
+}
+.link_nav_header a:hover{
+    color: white;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #60CAE8;
+}
+.footer_contenent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+}
+.footer_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.footer_text a{
+    font-size: 13px;
+    text-decoration: underline;
+}
+footer img{
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
