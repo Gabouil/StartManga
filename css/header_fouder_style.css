@@ -8,7 +8,7 @@ a {
 }
 body{
     background-size: 100%;
-    background: #020405;
+    background: #FFF;
     font-family:  "Baloo 2",Poppins, Roboto, Oxygen, Ubuntu, sans-serif;
     color: black;
 }
@@ -18,16 +18,19 @@ li {
 a {
     color: black;
 }
+main {
+    flex: 1 0 auto;
+}
 
 /* header */
 
 header {
-    width: 100vw;
-    position: relative;
+    position: fixed;
     background-color: #FFF;
     display: flex;
     align-items: center;
     z-index: 1;
+    width: 100vw;
 
 }
 header .logo_site{
@@ -41,13 +44,18 @@ header .logo_site{
 }
 
 
+.link_nav_header a:hover{
+    color: rgb(189, 10, 10);
+}
 
 
+.panier img:hover {
+    cursor: pointer;
+}
 
 /* footer */
 footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     height: 100px;
     width: 100%;
     background-color: #FFF;
@@ -88,7 +96,19 @@ footer img{
     cursor: pointer;
 }
 
-@media screen and ( max-width: 600px) {
+@media screen and ( max-width: 740px) {
+    header .logo_site{
+        height: 70px;
+        margin-left: 0%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100vw;
+    }
+    .logo_site img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     /* burger */
     .burger {
         display: block;
@@ -139,8 +159,8 @@ footer img{
         height: 100%;
         position: fixed;
         padding: 20px;
-        right: -50%;
-        top: 70px;
+        right: -50vw;
+        top: 80px;
         background-color: #FFF;
         transition: right 0.5s ease-in-out;
     }
@@ -155,11 +175,15 @@ footer img{
         font-weight: bold;
         height: 100%;
     }
-    .link_nav_header a:hover{
-        color: rgb(189, 10, 10);
+    .panier img {
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        right: 60px;
     }
+
 }
-@media screen and ( min-width: 601px) {
+@media screen and ( min-width: 741px) {
     /* navigation */
     .nav_header {
         margin-left: 10%;
@@ -171,17 +195,19 @@ footer img{
     .nav_header.open {
         right: 0;
     }
-    .link_nav_header{
-    }
     .link_nav_header a {
         text-align: center;
         color: #020405;
         font-weight: bold;
         height: 100%;
     }
-    .link_nav_header a:hover{
-        color: rgb(189, 10, 10);
+    .panier img {
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        right: 60px;
     }
+
     
 }
 @media screen and ( min-width: 1200px) {
@@ -191,6 +217,12 @@ footer img{
         justify-content: space-between;
         width: 40%;
         
+    }
+    .panier img {
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        right: 60px;
     }
     
 }
