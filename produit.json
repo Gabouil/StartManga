@@ -1,0 +1,73 @@
+[
+    {
+        "name": "livre 1",
+        "price": 7.3,
+        "img": "images/couvertures/1.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 2",
+        "price": 7.3,
+        "img": "images/couvertures/2.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 3",
+        "price": 7.3,
+        "img": "images/couvertures/3.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 4",
+        "price": 8,
+        "img": "images/couvertures/4.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 5",
+        "price": 10,
+        "img": "images/couvertures/5.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 6",
+        "price": 8,
+        "img": "images/couvertures/6.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 7",
+        "price": 7.3,
+        "img": "images/couvertures/7.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 8",
+        "price": 7.3,
+        "img": "images/couvertures/8.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 9",
+        "price": 10,
+        "img": "images/couvertures/9.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 10",
+        "price": 7.3,
+        "img": "images/couvertures/18.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 11",
+        "price": 8,
+        "img": "images/couvertures/17.jpg",
+        "panier": 0
+    },
+    {
+        "name": "livre 12",
+        "price": 7.3,
+        "img": "images/couvertures/20.jpg"
+    }
+]

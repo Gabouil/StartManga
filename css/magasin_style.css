@@ -1,0 +1,67 @@
+main{
+    padding-top: 80px;
+}
+
+.main_page {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-areas:
+        " . . . "
+        " . contact . "
+        " . . . ";
+}
+.produits {
+    width: 80%;
+    margin: auto;
+    grid-area: produits;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.produit {
+    width: 300px;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    " titre titre "
+    " text couverture "
+    " button button";
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.produit img{
+    grid-area: couverture;
+    width: 100%;
+    float: right;
+}
+.produit img:hover{
+    cursor: pointer;
+}
+.produit p{
+    grid-area: text;
+}
+.produit button{
+    margin-top: 10px;
+    grid-area: button;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgb(200, 200, 200);
+    border-style: none;
+    font-size: 18px;
+    font-weight: 50;
+    transition: border-radius 0.25s ease-out;
+
+}
+.produit button:hover {
+    cursor: pointer;
+    background-color: rgb(189, 10, 10);
+    border-radius: 5px;
+    color: white;
+}
+.produits h1 {
+    grid-area: titre;
+    margin-bottom: 10px;
+}

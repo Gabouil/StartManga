@@ -32,6 +32,7 @@
 }
 .button button{
     margin-top: 10px;
+    width: 100px;
     border-radius: 10px;
     color: white;
     background-color: black;
@@ -46,12 +47,8 @@
 }
 @media screen and ( max-width: 740px) {
     .contact {
-        grid-template-columns: 1fr;
-    grid-template-areas:
-      " . "
-      " contact "
-      " . ";
-    }  
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        }  
 }
 
 @media screen and ( min-width: 741px) {

@@ -49,8 +49,20 @@ header .logo_site{
 }
 
 
-.panier img:hover {
+.panier #icone_panier:hover {
     cursor: pointer;
+}
+#produit_panier {
+    display: none;
+    background-color: rgb(189, 10, 10);
+    border-radius: 18px;
+    padding: 5px;
+    color: white;
+
+    position: absolute;
+    top: 3px;
+    right: 55px;
+    z-index: 2;
 }
 
 /* footer */
@@ -175,7 +187,7 @@ footer img{
         font-weight: bold;
         height: 100%;
     }
-    .panier img {
+    .panier #icone_panier {
         width: 60px;
         position: absolute;
         top: 10px;
@@ -201,7 +213,7 @@ footer img{
         font-weight: bold;
         height: 100%;
     }
-    .panier img {
+    .panier #icone_panier {
         width: 60px;
         position: absolute;
         top: 10px;
@@ -218,7 +230,7 @@ footer img{
         width: 40%;
         
     }
-    .panier img {
+    .panier #icone_panier {
         width: 60px;
         position: absolute;
         top: 10px;

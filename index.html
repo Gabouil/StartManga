@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartManga</title>
     <link rel="stylesheet" href="./css/header_fouder_style.css">
+    <link rel="stylesheet" href="./css/panier_style.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -22,7 +23,11 @@
             <li class="link_nav_header"><a href="./contact_index.html">Nous contacter</a></li>
         </nav>
         <section class="panier">
-            <img src="./images/panier.svg" alt="image pour accéder au panier">
+            <span id="produit_panier">0</span>
+            <img id="icone_panier" src="./images/panier.svg" alt="image pour accéder au panier">
+            <div class="panier_fenetre" id="panier">
+                
+            </div>
         </section>
     </header>
     <main>
@@ -76,6 +81,7 @@
         </a>
     </footer>
     <script src="./js/burger.js"></script>
+    <script src="./js/panier.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

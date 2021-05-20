@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartManga - Magasin</title>
     <link rel="stylesheet" href="./css/header_fouder_style.css">
-    <link rel="stylesheet" href="./css/groupe_style.css">
+    <link rel="stylesheet" href="./css/panier_style.css">
+    <link rel="stylesheet" href="./css/magasin_style.css">
 </head>
 <body>
     <header>
@@ -22,21 +23,126 @@
             <li class="link_nav_header"><a href="./contact_index.html">Nous contacter</a></li>
         </nav>
         <section class="panier">
-            <img src="./images/panier.svg" alt="image pour accéder au panier">
+            <span id="produit_panier">0</span>
+            <img id="icone_panier" src="./images/panier.svg" alt="image pour accéder au panier">
+            <div class="panier_fenetre" id="panier">
+                
+            </div>
         </section>
     </header>
     <main>
+        <section class="main_page">
+            <section class="produits">
+                <div class="produit">
+                    <h1>Livre 1</h1>
+                    <img src="images/couvertures/1.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 2</h1>
+                    <img src="images/couvertures/2.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 3</h1>
+                    <img src="images/couvertures/3.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 4</h1>
+                    <img src="images/couvertures/4.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">8 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 5</h1>
+                    <img src="images/couvertures/5.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">10 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 6</h1>
+                    <img src="images/couvertures/6.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">8 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 7</h1>
+                    <img src="images/couvertures/7.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 8</h1>
+                    <img src="images/couvertures/8.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 9</h1>
+                    <img src="images/couvertures/9.jpg">
+                    <p class="produit_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">10 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 10</h1>
+                    <img src="images/couvertures/18.jpg">
+                        <p class="produit_des">LLorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 11</h1>
+                    <img src="images/couvertures/17.jpg">
+                        <p class="produit_des">LLorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">8 €</span> Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <h1>Livre 12</h1>
+                    <img src="images/couvertures/20.jpg">
+                        <p class="produit_des">LLorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dignissimos 
+                        esse molestias, nostrum itaque temporibus, numquam deleniti enim et sequi, ab vitae consequatur 
+                        suscipitquasi ut natus id laudantium [...]</p>
+                    <button class="produit_button"> <span class="prix">7,3 €</span> Ajouter au panier</button>
+                </div>
+            </section>
+        </section>
     </main>
     <footer>
         <div class="footer_text">
-            <p>&copy; 2020 - TheScrooges </p>
+            <p>&copy; 2020 - StartManga </p>
             <a href="#">Mention légale</a>
         </div>
-        <a href="https://www.instagram.com/the_scrooges/?igshid=puvf6dg7rwbh" target="_blank">
+        <a href="https://www.instagram.com/" target="_blank">
             <img class="social logo" src="./images/instagram_black.svg" alt="logo instagram">
         </a>
     </footer>
     <script src="./js/burger.js"></script>
+    <script src="./js/panier.js"></script>
     <script src="./js/magasin.js"></script>
 </body>
 </html>

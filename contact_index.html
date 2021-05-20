@@ -7,6 +7,7 @@
     <title>StartManga - Contact</title>
     <link href="https://fonts.googleapis.com/css?family=Baloo+2|Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/header_fouder_style.css">
+    <link rel="stylesheet" href="./css/panier_style.css">
     <link rel="stylesheet" href="./css/contact_style.css">
 </head>
 <body>
@@ -23,7 +24,11 @@
             <li class="link_nav_header"><a href="./contact_index.html">Nous contacter</a></li>
         </nav>
         <section class="panier">
-            <img src="./images/panier.svg" alt="image pour accéder au panier">
+            <span id="produit_panier">0</span>
+            <img id="icone_panier" src="./images/panier.svg" alt="image pour accéder au panier">
+            <div class="panier_fenetre" id="panier">
+                
+            </div>
         </section>
     </header>
     <main>
@@ -31,15 +36,15 @@
             <form class="form_contact" action="/ma-page-de-traitement" method="post">
                 <div>
                     <label class="label_contact" for="name">Nom :</label> <br>
-                    <input type="text" class="input_contact" id="name" name="user_name" placeholder="Rentrez votre nom" requiwhite>
+                    <input type="text" class="input_contact" id="name" name="user_name" placeholder="Rentrez votre nom" required>
                 </div>
                 <div>
                     <label class="label_contact" for="mail">e-mail :</label><br>
-                    <input type="email" class="input_contact" id="mail" name="user_mail" placeholder="Rentrez votre mail" requiwhite>
+                    <input type="email" class="input_contact" id="mail" name="user_mail" placeholder="Rentrez votre mail" required>
                 </div>
                 <div>
                     <label class="label_contact" for="msg">Message :</label><br>
-                    <textarea class="input_contact" id="msg" name="user_message" placeholder="Quel est votre message ?" requiwhite rows="5" cols="33"></textarea>
+                    <textarea class="input_contact" id="msg" name="user_message" placeholder="Quel est votre message ?" required rows="5" cols="33"></textarea>
                 </div>
                 <div class="button">
                     <button type="submit">Envoyer le message</button>
@@ -49,14 +54,15 @@
     </main>
     <footer>
         <div class="footer_text">
-            <p>&copy; 2020 - TheScrooges </p>
+            <p>&copy; 2020 - StartManga </p>
             <a href="#">Mention légale</a>
         </div>
-        <a href="https://www.instagram.com/the_scrooges/?igshid=puvf6dg7rwbh" target="_blank">
+        <a href="https://www.instagram.com/" target="_blank">
             <img class="social logo" src="./images/instagram_black.svg" alt="logo instagram">
         </a>
     </footer>
     <script src="./js/burger.js"></script>
+    <script src="./js/panier.js"></script>
     <script src="./js/contact.js"></script>
 </body>
 </html>
