@@ -111,10 +111,11 @@ footer img{
 @media screen and ( max-width: 740px) {
     header .logo_site{
         height: 70px;
-        margin-left: 0%;
+        margin-left: 25vw;
         margin-top: 5px;
         margin-bottom: 5px;
-        width: 100vw;
+        width: 50vw;
+
     }
     .logo_site img {
         position: absolute;

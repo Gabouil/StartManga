@@ -6,21 +6,21 @@ let listProduits = [
     {
         "id": 0,
         "name": "livre 1",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/1.jpg",
         "panier": 0
     },
     {
         "id": 1,
         "name": "livre 2",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/2.jpg",
         "panier": 0
     },
     {
         "id": 2,
         "name": "livre 3",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/3.jpg",
         "panier": 0
     },
@@ -48,14 +48,14 @@ let listProduits = [
     {
         "id": 6,
         "name": "livre 7",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/7.jpg",
         "panier": 0
     },
     {
         "id": 7,
         "name": "livre 8",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/8.jpg",
         "panier": 0
     },
@@ -69,7 +69,7 @@ let listProduits = [
     {
         "id": 9,
         "name": "livre 10",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/18.jpg",
         "panier": 0
     },
@@ -83,7 +83,7 @@ let listProduits = [
     {
         "id": 11,
         "name": "livre 12",
-        "prix": 7.3,
+        "prix": 7,
         "img": "images/couvertures/20.jpg",
         "panier": 0
     }

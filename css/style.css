@@ -38,7 +38,9 @@
     .section_info {
         margin-top: 50px;
         margin-bottom: 50px;
-        width: 100vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
     }
     
     .section_info img {

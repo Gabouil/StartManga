@@ -1,11 +1,13 @@
 .panier_fenetre {
+    overflow-y: scroll;
     position: fixed;
     top: 80px;
     right: -100vw;
     background-color: white;
     z-index: 4;
-    height: 100vh;
+    height: 91.5%;
     width: 50vw;
+    margin-bottom: 20px;
 }
 
 .open_panier {
