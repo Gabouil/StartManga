@@ -3,8 +3,10 @@ let produits = document.querySelectorAll(".produit");
 
 for (let i = 0; i < produits.length; i++) {
     produits[i].addEventListener('click', function() {
-        listProduits[i].panier += 1
-        saveLocal(i);
+        if(listProduits[i].panier < 9) {
+            listProduits[i].panier += 1
+            saveLocal(i);
+        }
     })
 }
 
@@ -20,8 +22,11 @@ function saveLocal(i) {
         nbrProduits.style.display = "block"
         localStorage.setItem("listProduits", JSON.stringify(listProduits))
     };
-    window.location.reload()
     produitNumber = localStorage.getItem("produitNbr");
     nbrProduits.textContent = produitNumber;
+    pushPanier()
+    printPanier()
+    rechachButton()
+    detectClick()
 
 }

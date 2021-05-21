@@ -90,23 +90,60 @@ let listProduits = [
 ];
 let panierSTR = "";
 var produitsPanier = [];
+var savProduitsPanier = 0;
+
 buttonPanier.addEventListener('click', function() {
     panier.classList.toggle('open_panier');
 });
 
-printNbr()
 
-for (let i = 0; i < listProduits.length; i++) {
-    if (listProduits[i].panier > 0) {
-        produitsPanier.push(listProduits[i]);
-    };
+printNbr()
+pushPanier()
+printPanier()
+
+
+let buttonP = document.querySelectorAll(".buttonP");
+let buttonM = document.querySelectorAll(".buttonM");
+let buttonNone = document.querySelectorAll(".buttonNone");
+let buttons = ""
+let noneProduit;
+
+detectClick()
+
+function rechachButton(){
+    buttonP = document.querySelectorAll(".buttonP");
+    buttonM = document.querySelectorAll(".buttonM");
+    buttonNone = document.querySelectorAll(".buttonNone");
+    buttons = ""
+    noneProduit;
 }
-for (let i = 0; i < produitsPanier.length; i++) {
-    prix += produitsPanier[i].prix * produitsPanier[i].panier
-    panierSTR += "<div class='produit_panier'> <img src='" + produitsPanier[i].img + "'><button class='buttonM'>-</button> <p class='nbr_article'>" + produitsPanier[i].panier + "</p> <button class='buttonP'>+</button><p class='prix'>"+ produitsPanier[i].prix * produitsPanier[i].panier + " €</p><button class='buttonNone'><img src='./images/mangaNone.svg'> </button></div><br>"
+
+function pushPanier(){
+    produitsPanier = []
+    for (let i = 0; i < listProduits.length; i++) {
+        if (listProduits[i].panier > 0) {
+            produitsPanier.push(listProduits[i]);
+        };
+    }
+    savProduitsPanier = produitsPanier.length
 }
-panierSTR += "<p class='prix_total'> Prix Total : " + prix + " €</p>"
-panier.insertAdjacentHTML("beforeend", panierSTR)
+
+function printPanier() {
+    panierSTR = ""
+    panier.innerHTML = ""
+    prix = 0
+    for (let i = 0; i < produitsPanier.length; i++) {
+        prix += produitsPanier[i].prix * produitsPanier[i].panier
+        panierSTR += "<div class='produit_panier'> <img src='" + produitsPanier[i].img + "'><button class='buttonM'>-</button> <p class='nbr_article'>" + produitsPanier[i].panier + "</p> <button class='buttonP'>+</button><p class='prix'>"+ produitsPanier[i].prix * produitsPanier[i].panier + " €</p><button class='buttonNone'><img src='./images/mangaNone.svg'> </button></div><br>"
+    }
+    panierSTR += "<p class='prix_total'> Prix Total : " + prix + " €</p>"
+    panierSTR += "<button class='button_payer'> Je veux payer </button>"
+    if (prix == 0) {
+        panierSTR = ""
+        panierSTR += "<div class='produit_panier_vide'><img id='img_panier_vide' src='images/panier_vide.svg'><p id='text_panier_vide'>Vous n'avez rien dans votre panier</p></div><br>"
+    }
+    panier.insertAdjacentHTML("beforeend", panierSTR)
+}
 
 function printNbr() {
     let produitNumber = localStorage.getItem("produitNbr");
@@ -119,35 +156,32 @@ function printNbr() {
     };
 }
 
-
-let buttonP = document.querySelectorAll(".buttonP");
-let buttonM = document.querySelectorAll(".buttonM");
-let buttonNone = document.querySelectorAll(".buttonNone");
-let buttons = ""
-let noneProduit;
-
-for (let i = 0; i < produitsPanier.length; i++) {
-    buttonP[i].addEventListener('click', function() {
-        buttons = "+"
-        listProduits[produitsPanier[i].id].panier += 1
-        updatePanier(buttons, i);
-    })
-    buttonM[i].addEventListener('click', function() {
-        buttons = "-"
-        listProduits[produitsPanier[i].id].panier -= 1
-        updatePanier(buttons, i);
-    })
-    buttonNone[i].addEventListener('click', function() {
-        buttons = "*"
-        noneProduit = produitsPanier[i].panier
-        listProduits[produitsPanier[i].id].panier = 0
-        updatePanier(buttons, i);
-    })
+function detectClick(){
+    for (let i = 0; i < savProduitsPanier; i++) {
+        buttonP[i].addEventListener('click', function() {
+            buttons = "+"
+            if(listProduits[produitsPanier[i].id].panier < 9) {
+                listProduits[produitsPanier[i].id].panier += 1
+                updatePanier(buttons, i); 
+            }
+        })
+        buttonM[i].addEventListener('click', function() {
+            buttons = "-"
+            listProduits[produitsPanier[i].id].panier -= 1
+            updatePanier(buttons, i);
+        })
+        buttonNone[i].addEventListener('click', function() {
+            buttons = "*"
+            noneProduit = produitsPanier[i].panier
+            listProduits[produitsPanier[i].id].panier = 0
+            updatePanier(buttons, i);
+        })
+    }
 }
 
 
+
 function updatePanier(buttons, i) {
-    console.log(buttons)
     let produitNumber = localStorage.getItem("produitNbr");
     produitNumber = parseInt(produitNumber);
     if (produitNumber) {
@@ -166,8 +200,11 @@ function updatePanier(buttons, i) {
         nbrProduits.style.display = "block";
         localStorage.setItem("listProduits", JSON.stringify(listProduits));
     };
-    window.location.reload()
+    // window.location.reload()
     produitNumber = localStorage.getItem("produitNbr");
     nbrProduits.textContent = produitNumber;
-
+    pushPanier()
+    printPanier()
+    rechachButton()
+    detectClick()
 }
