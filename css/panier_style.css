@@ -33,6 +33,11 @@
     font-size: 25px;
     
 }
+
+button {
+    background: none;
+}
+
 .produit_panier button{
     border: none;
     font-weight: 1000;
@@ -43,9 +48,11 @@
     width: 20px;
 }
 .buttonM {
+    background: none;
     cursor: pointer;
 }
 .buttonP {
+    background: none;
     cursor: pointer;
 }
 #button_payer {
