@@ -88,6 +88,10 @@
         width: 100vw;
         height: 89%;
     }
+    .open_panier {
+        width: 101vw;
+
+    }
 }
 @media screen and (max-width: 900px) {
     .produit_panier {

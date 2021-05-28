@@ -1,11 +1,11 @@
 .main_page {
+    padding-top: 150px;
+    padding-bottom: 50px;
     display: grid;
     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-    grid-template-rows: 0.4fr 1fr 0.4fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-      ". . . . "
-      " . panier contact . "
-      " . . . . ";
+      " . panier contact . ";
 }
 
 .contact {
@@ -16,10 +16,6 @@
     padding-top: 80px;
 }
 
-.form_contact {
-    width: 100%;
-    height: 100%;
-}
 
 .label_contact {
     margin-left: 3px;
@@ -115,12 +111,10 @@
     }
     .main_page {
         grid-template-columns: 0.1fr 1fr 0.1fr;
-        grid-template-rows: 0.3fr 1fr 1fr 0.2fr;
+        grid-template-rows: 0.3fr 1fr;
         grid-template-areas:
-        " . . . "
-        " . panier . "
         " . contact . "
-        " . . . ";
+        " . panier . ";
     }
 }
 
