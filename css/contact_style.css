@@ -33,16 +33,19 @@
 .button button{
     margin-top: 10px;
     width: 100px;
-    border-radius: 10px;
-    color: white;
-    background-color: black;
+    border-radius: 50px;
+    color: black;
+    background-color: rgb(163, 163, 163);
     border-style: none;
     padding: 10px;
+    transition: border-radius 0.25s ease-out;
 
 }
 .button button:hover{
     cursor: pointer;
-    background-color: red;
+    background-color: rgb(189, 10, 10);
+    border-radius: 5px;
+    color: white;
 
 }
 @media screen and ( max-width: 740px) {

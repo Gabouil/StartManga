@@ -137,7 +137,7 @@ function printPanier() {
         panierSTR += "<div class='produit_panier'> <img src='" + produitsPanier[i].img + "'><button class='buttonM'>-</button> <p class='nbr_article'>" + produitsPanier[i].panier + "</p> <button class='buttonP'>+</button><p class='prix'>"+ produitsPanier[i].prix * produitsPanier[i].panier + " €</p><button class='buttonNone'><img src='./images/mangaNone.svg'> </button></div><br>"
     }
     panierSTR += "<p class='prix_total'> Prix Total : " + prix + " €</p>"
-    panierSTR += "<button class='button_payer'> Je veux payer </button>"
+    panierSTR += "<button class='button_payer'><a href='./achat_index.html'> Je veux payer</a></button>"
     if (prix == 0) {
         panierSTR = ""
         panierSTR += "<div class='produit_panier_vide'><img id='img_panier_vide' src='images/panier_vide.svg'><p id='text_panier_vide'>Vous n'avez rien dans votre panier</p></div><br>"

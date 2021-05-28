@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartManga - Achat</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2|Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header_fouder_style.css">
+    <link rel="stylesheet" href="./css/achat_style.css">
+</head>
+<body>
+    <header>
+        <a class="logo_site" href="./index.html">
+            <img class="social logo" src="./images/logo_black.png" alt="logo start manga">
+        </a>
+        <div class="burger">
+            <span></span>
+        </div>
+        <nav class="nav_header">
+            <li class="link_nav_header"><a href="./index.html">Accueil</a></li>
+            <li class="link_nav_header"><a href="./magasin_index.html">Magasin</a></li>
+            <li class="link_nav_header"><a href="./contact_index.html">Nous contacter</a></li>
+        </nav>
+    </header>
+    <main>
+        <section class="main_page">
+            <section class="panier">
+                <div class="panier_fenetre" id="panier">
+                    
+                </div>
+            </section>
+            <section class="contact" >
+                <form class="form_contact" action="/ma-page-de-traitement" method="post">
+                    <div>
+                        <label class="label_contact" for="name">Nom :</label> <br>
+                        <input type="text" class="input_contact" id="name" name="user_name" placeholder="Rentrez votre nom" required>
+                    </div>
+                    <div>
+                        <label class="label_contact" for="name">Prénom :</label> <br>
+                        <input type="text" class="input_contact" id="name" name="user_name" placeholder="Rentrez votre nom" required>
+                    </div>
+                    <div>
+                        <label class="label_contact" for="mail">e-mail :</label><br>
+                        <input type="email" class="input_contact" id="mail" name="user_mail" placeholder="Rentrez votre mail" required>
+                    </div>
+                    <div class="button">
+                        <button type="submit">acheter</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_text">
+            <p>&copy; 2020 - StartManga </p>
+            <a href="#">Mention légale</a>
+        </div>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img class="social logo" src="./images/instagram_black.svg" alt="logo instagram">
+        </a>
+    </footer>
+    <script src="./js/burger.js"></script>
+    <script src="./js/achat.js"></script>
+</body>
+</html>

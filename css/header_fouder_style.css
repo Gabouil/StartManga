@@ -9,7 +9,7 @@ a {
 body{
     background-size: 100%;
     background: #FFF;
-    font-family:  "Baloo 2",Poppins, Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: Poppins, Roboto, Oxygen, Ubuntu, sans-serif;
     color: black;
 }
 li {
@@ -31,7 +31,7 @@ header {
     align-items: center;
     z-index: 1;
     width: 100vw;
-
+    border-bottom: solid rgb(189, 10, 10);
 }
 header .logo_site{
     height: 70px;
@@ -71,6 +71,7 @@ footer {
     height: 100px;
     width: 100%;
     background-color: #FFF;
+    border-top: solid rgb(189, 10, 10);
 }
 .footer_contenent {
     position: absolute;
@@ -176,6 +177,7 @@ footer img{
         top: 80px;
         background-color: #FFF;
         transition: right 0.5s ease-in-out;
+        border-left: solid rgb(189, 10, 10);
     }
     .nav_header.open {
         right: 0;

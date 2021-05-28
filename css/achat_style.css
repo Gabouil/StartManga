@@ -1,0 +1,111 @@
+.main_page {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.4fr 1fr 0.4fr;
+    grid-template-areas:
+      ". . . . "
+      " . panier contact . "
+      " . . . . ";
+}
+
+.contact {
+    grid-area: contact;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #FFF;
+    padding-top: 80px;
+}
+
+.form_contact {
+    width: 100%;
+    height: 100%;
+}
+
+.input_contact {
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+#msg {
+    resize : none;
+    height: 300px;
+}
+.button button{
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(200, 200, 200);
+    border-style: none;
+    padding: 10px;
+    transition: border-radius 0.25s ease-out;
+
+}
+.button button:hover{
+    cursor: pointer;
+    background-color: rgb(189, 10, 10);
+    border-radius: 5px;
+    color: white;
+
+}
+.panier {
+    grid-area: panier;
+}
+.panier_fenetre {
+    overflow-y: scroll;
+    background-color: white;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+}
+
+.panier_fenetre img {
+    width: 100px;
+    left: 50px;
+}
+.produit_panier {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+.prix_total {
+    margin-left: 50px;
+    font-weight: 600;
+    font-size: 25px;
+    
+}
+.produit_panier_vide {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#img_panier_vide {
+    width: 35%;
+}
+#text_panier_vide {
+    font-size: 100%;
+}
+
+
+@media screen and ( max-width: 740px) {
+    .main_page {
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+        grid-template-areas:
+        " . . . "
+        " . panier . "
+        " . contact . "
+        " . . . ";
+    }
+}
+
+@media screen and ( min-width: 741px) {
+}
+@media screen and ( min-width: 1200px) {
+}
