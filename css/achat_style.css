@@ -21,10 +21,26 @@
     height: 100%;
 }
 
+.label_contact {
+    margin-left: 3px;
+}
+
 .input_contact {
     margin-top: 10px;
-    height: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px;
+    border: 2px solid rgb(163, 163, 163);
     width: 100%;
+}
+.input_contact:focus{
+    border: 1px solid rgb(76, 189, 10);
+
+}
+.input_contact:focus:invalid {
+    border: 1px solid rgb(189, 10, 10);
+
 }
 
 #msg {
@@ -34,9 +50,9 @@
 .button button{
     margin-top: 10px;
     width: 100px;
-    border-radius: 10px;
+    border-radius: 50px;
     color: black;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(163, 163, 163);
     border-style: none;
     padding: 10px;
     transition: border-radius 0.25s ease-out;
@@ -94,9 +110,12 @@
 
 
 @media screen and ( max-width: 740px) {
+    .produit_panier {
+        width: 60%;
+    }
     .main_page {
         grid-template-columns: 0.1fr 1fr 0.1fr;
-        grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+        grid-template-rows: 0.3fr 1fr 1fr 0.2fr;
         grid-template-areas:
         " . . . "
         " . panier . "

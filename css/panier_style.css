@@ -48,7 +48,7 @@
 .buttonP {
     cursor: pointer;
 }
-.button_payer {
+#button_payer {
     margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -62,7 +62,7 @@
     font-weight: 50;
     transition: border-radius 0.25s ease-out;
 }
-.button_payer:hover {
+#button_payer:hover {
     cursor: pointer;
     background-color: rgb(189, 10, 10);
     border-radius: 5px;
