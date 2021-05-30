@@ -44,7 +44,7 @@
     resize : none;
     height: 300px;
 }
-.button button{
+#button button{
     margin-top: 10px;
     width: 100px;
     border-radius: 50px;
@@ -55,7 +55,7 @@
     transition: border-radius 0.25s ease-out;
 
 }
-.button button:hover{
+#button button:hover{
     cursor: pointer;
     background-color: rgb(189, 10, 10);
     border-radius: 5px;

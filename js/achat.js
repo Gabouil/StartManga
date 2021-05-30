@@ -1,4 +1,5 @@
 var listProduits = []
+let buttonBuy = document.getElementById("button")
 
 printNbr()
 pushPanier()
@@ -53,3 +54,21 @@ function printNbr() {
         listProduits = JSON.parse(listProduits)
     };
 }
+
+buttonBuy.addEventListener("click", function() {
+    var request = new XMLHttpRequest();
+    request.open("POST", listProduits);
+    request.onload = function(){
+        var value = {
+            'firstname' : document.pay.first_name.value,
+            'lastname' : document.pay.last_name.value,
+            'email' : document.pay.mail.value,
+            'object' : localStorage.getItem('produitsPanier'),
+            'prix' : localStorage.getItem('prix')
+        }
+    };
+    request.send();
+    localStorage.clear();
+    document.location.reload();
+            
+})

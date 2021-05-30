@@ -127,6 +127,7 @@ function pushPanier(){
             produitsPanier.push(listProduits[i]);
         };
     }
+    localStorage.setItem("produitsPanier", JSON.stringify(produitsPanier));
     savProduitsPanier = produitsPanier.length
 }
 
@@ -144,6 +145,7 @@ function printPanier() {
         panierSTR = ""
         panierSTR += "<div class='produit_panier_vide'><img id='img_panier_vide' src='images/panier_vide.svg'><p id='text_panier_vide'>Vous n'avez rien dans votre panier</p></div><br>"
     }
+    localStorage.setItem("prix", prix);
     panier.insertAdjacentHTML("beforeend", panierSTR)
 }
 
